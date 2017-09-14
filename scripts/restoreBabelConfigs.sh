@@ -11,10 +11,8 @@ mv $(pwd)/../draft-js-alignment-plugin/tmpBabelrc $(pwd)/../draft-js-alignment-p
 mv $(pwd)/../draft-js-focus-plugin/tmpBabelrc $(pwd)/../draft-js-focus-plugin/.babelrc
 mv $(pwd)/../draft-js-resizeable-plugin/tmpBabelrc $(pwd)/../draft-js-resizeable-plugin/.babelrc
 mv $(pwd)/../draft-js-inline-toolbar-plugin/tmpBabelrc $(pwd)/../draft-js-inline-toolbar-plugin/.babelrc
-mv $(pwd)/../draft-js-static-toolbar-plugin/tmpBabelrc $(pwd)/../draft-js-static-toolbar-plugin/.babelrc
-mv $(pwd)/../draft-js-inline-static-plugin/tmpBabelrc $(pwd)/../draft-js-inline-static-plugin/.babelrc
 mv $(pwd)/../draft-js-side-toolbar-plugin/tmpBabelrc $(pwd)/../draft-js-side-toolbar-plugin/.babelrc
 mv $(pwd)/../draft-js-image-plugin/tmpBabelrc $(pwd)/../draft-js-image-plugin/.babelrc
 mv $(pwd)/../draft-js-buttons/tmpBabelrc $(pwd)/../draft-js-buttons/.babelrc
 mv $(pwd)/../draft-js-video-plugin/tmpBabelrc $(pwd)/../draft-js-video-plugin/.babelrc
-mv $(pwd)/../draft-js-anchor-plugin/tmpBabelrc $(pwd)/../draft-js-anchor-plugin/.babelrc
+mv $(pwd)/../draft-js-anchor-plugin/tmpBabelrc $(pwd)/../draft-js-image-plugin/.babelrc

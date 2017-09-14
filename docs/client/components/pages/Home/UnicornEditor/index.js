@@ -4,7 +4,6 @@ import createHashtagPlugin from 'draft-js-hashtag-plugin'; // eslint-disable-lin
 import createStickerPlugin from 'draft-js-sticker-plugin'; // eslint-disable-line import/no-unresolved
 import createLinkifyPlugin from 'draft-js-linkify-plugin'; // eslint-disable-line import/no-unresolved
 import createMentionPlugin, { defaultSuggestionsFilter } from 'draft-js-mention-plugin'; // eslint-disable-line import/no-unresolved
-import createEmojiPlugin from 'draft-js-emoji-plugin'; // eslint-disable-line import/no-unresolved
 import createUndoPlugin from 'draft-js-undo-plugin'; // eslint-disable-line import/no-unresolved
 import {
   // convertToRaw,
@@ -17,7 +16,6 @@ import stickers from './stickers';
 import mentions from './mentions';
 // import initialState from './initialState';
 
-const emojiPlugin = createEmojiPlugin();
 const hashtagPlugin = createHashtagPlugin();
 const linkifyPlugin = createLinkifyPlugin();
 const mentionPlugin = createMentionPlugin();
@@ -26,12 +24,10 @@ const stickerPlugin = createStickerPlugin({
   stickers,
 });
 const { MentionSuggestions } = mentionPlugin;
-const { EmojiSuggestions } = emojiPlugin;
 const { StickerSelect } = stickerPlugin;
 const { UndoButton, RedoButton } = undoPlugin;
 
 const plugins = [
-  emojiPlugin,
   hashtagPlugin,
   stickerPlugin,
   linkifyPlugin,
@@ -82,7 +78,6 @@ export default class UnicornEditor extends Component {
             onSearchChange={this.onMentionSearchChange}
             suggestions={this.state.suggestions}
           />
-          <EmojiSuggestions />
           <div className={styles.editorButton}>
             <StickerSelect editor={this} />
           </div>

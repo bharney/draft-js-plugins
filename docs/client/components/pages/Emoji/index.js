@@ -11,8 +11,6 @@ import simpleEditorStylesCode from '!!../../../loaders/prism-loader?language=css
 import webpackConfig from '!!../../../loaders/prism-loader?language=javascript!./webpackConfig';
 // eslint-disable-next-line import/no-unresolved
 import webpackImport from '!!../../../loaders/prism-loader?language=javascript!./webpackImport';
-// eslint-disable-next-line import/no-unresolved
-import customExampleCode from '!!../../../loaders/prism-loader?language=javascript!./CustomEmojiEditor';
 
 import styles from './styles.css';
 import Container from '../../shared/Container';
@@ -22,7 +20,6 @@ import NavBar from '../../shared/NavBar';
 import Separator from '../../shared/Separator';
 import Code from '../../shared/Code';
 import SimpleEmojiEditor from './SimpleEmojiEditor';
-import CustomEmojiEditor from './CustomEmojiEditor';
 import AlternateContainer from '../../shared/AlternateContainer';
 import ExternalLink from '../../shared/Link';
 import InlineCode from '../../shared/InlineCode';
@@ -329,11 +326,6 @@ export default class App extends Component {
           <SimpleEmojiEditor />
           <Code code={simpleExampleCode} name="SimpleEmojiEditor.js" />
           <Code code={simpleEditorStylesCode} name="editorStyles.js" />
-        </Container>
-        <Container>
-          <Heading level={2}>Custom Emoji Example with native emojis</Heading>
-          <CustomEmojiEditor />
-          <Code code={customExampleCode} name="SimpleEmojiEditor.js" />
         </Container>
         <SocialBar />
       </div>

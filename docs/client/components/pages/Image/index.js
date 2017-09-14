@@ -11,6 +11,8 @@ import customExampleEditorStylesCode from '!!../../../loaders/prism-loader?langu
 // eslint-disable-next-line import/no-unresolved
 import addImageExampleCode from '!!../../../loaders/prism-loader?language=javascript!./AddImageEditor';
 // eslint-disable-next-line import/no-unresolved
+import addImageSidebarExampleCode from '!!../../../loaders/prism-loader?language=javascript!./AddImageSidebar';
+// eslint-disable-next-line import/no-unresolved
 import addImageExampleEditorStylesCode from '!!../../../loaders/prism-loader?language=css!./AddImageEditor/editorStyles.css';
 // eslint-disable-next-line import/no-unresolved
 import gettingStarted from '!!../../../loaders/prism-loader?language=javascript!./gettingStarted';
@@ -27,6 +29,7 @@ import Code from '../../shared/Code';
 import SimpleImageEditor from './SimpleImageEditor';
 import CustomImageEditor from './CustomImageEditor';
 import AddImageEditor from './AddImageEditor';
+import AddImageSidebar from './AddImageSidebar';
 import ExternalLink from '../../shared/Link';
 import InlineCode from '../../shared/InlineCode';
 import SocialBar from '../../shared/SocialBar';
@@ -149,6 +152,12 @@ export default class App extends Component {
           <Heading level={2}>Add Image Button Example</Heading>
           <AddImageEditor />
           <Code code={addImageExampleCode} name="AddImageEditor.js" />
+          <Code code={addImageExampleEditorStylesCode} name="editorStyles.css" />
+        </Container>
+        <Container>
+          <Heading level={2}>Add Image Sidebar Example</Heading>
+          <AddImageSidebar />
+          <Code code={addImageSidebarExampleCode} name="AddImageSidebar.js" />
           <Code code={addImageExampleEditorStylesCode} name="editorStyles.css" />
         </Container>
         <SocialBar />

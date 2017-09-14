@@ -1,10 +1,10 @@
 {
-  "name": "draft-js-static-toolbar-plugin",
-  "version": "2.0.0-rc4",
-  "description": "Static Toolbar Plugin for DraftJS",
+  "name": "draft-js-image-sidebar-plugin",
+  "version": "2.0.0-rc5",
+  "description": "Toolbar Plugin for DraftJS",
   "author": {
-    "name": "Julian Krispel",
-    "email": "julian@reactrocket.com"
+    "name": "Brian Harney",
+    "email": "bharney0@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "decorate-component-with-props": "^1.0.2",
-    "draft-js-buttons": "^2.0.0-rc4",
+    "draft-js-buttons": "^2.0.0-rc5",
     "find-with-regex": "^1.0.2",
     "immutable": "~3.7.4",
     "prop-types": "^15.5.8",

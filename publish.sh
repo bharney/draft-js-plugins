@@ -32,12 +32,6 @@ npm install
 npm publish --tag beta
 rm -rf node_modules
 cd ..
-cd draft-js-static-toolbar-plugin
-npm install
-npm publish --tag beta
-rm -rf node_modules
-cd ..
-
 cd draft-js-linkify-plugin
 npm publish --tag beta
 cd ..

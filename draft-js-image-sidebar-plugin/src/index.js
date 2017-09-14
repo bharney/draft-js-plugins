@@ -1,28 +1,22 @@
 import decorateComponentWithProps from 'decorate-component-with-props';
-import {
-  ItalicButton,
-  BoldButton,
-  UnderlineButton,
-  CodeButton,
-} from 'draft-js-buttons'; // eslint-disable-line import/no-unresolved
 import createStore from './utils/createStore';
 import Toolbar from './components/Toolbar';
-import Separator from './components/Separator';
+import DefaultBlockTypeSelect from './components/DefaultBlockTypeSelect';
 import buttonStyles from './buttonStyles.css';
+import blockTypeSelectStyles from './blockTypeSelectStyles.css';
 import toolbarStyles from './toolbarStyles.css';
 
 export default (config = {}) => {
-  const defaultTheme = { buttonStyles, toolbarStyles };
+  const defaultTheme = { buttonStyles, blockTypeSelectStyles, toolbarStyles };
 
-  const store = createStore({});
+  const store = createStore({
+    isVisible: false,
+  });
 
   const {
     theme = defaultTheme,
     structure = [
-      BoldButton,
-      ItalicButton,
-      UnderlineButton,
-      CodeButton,
+      DefaultBlockTypeSelect
     ]
   } = config;
 
@@ -33,20 +27,16 @@ export default (config = {}) => {
   };
 
   return {
-    initialize: ({ getEditorState, setEditorState }) => {
+    initialize: ({ setEditorState, getEditorState, getEditorRef }) => {
       store.updateItem('getEditorState', getEditorState);
       store.updateItem('setEditorState', setEditorState);
+      store.updateItem('getEditorRef', getEditorRef);
     },
-
-    // Re-Render the text-toolbar on selection change
+    // Re-Render the toolbar on every change
     onChange: (editorState) => {
-      store.updateItem('selection', editorState.getSelection());
+      store.updateItem('editorState', editorState);
       return editorState;
     },
-    Toolbar: decorateComponentWithProps(Toolbar, toolbarProps),
+    SideToolbar: decorateComponentWithProps(Toolbar, toolbarProps),
   };
-};
-
-export {
-  Separator,
 };

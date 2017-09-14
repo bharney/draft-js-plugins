@@ -5,4 +5,4 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## To Be Released
 
-### Released the first working of DraftJS Toolbar Plugin
+### Released the first working of DraftJS Side Toolbar Plugin

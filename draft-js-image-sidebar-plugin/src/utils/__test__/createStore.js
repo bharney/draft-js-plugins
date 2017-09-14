@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import { stub } from 'sinon';
 import createStore from '../createStore';
 
 describe('createStore', () => {
@@ -21,14 +20,5 @@ describe('createStore', () => {
       done();
     });
     store.updateItem('name', 'Ada');
-  });
-
-  it('should be possible to unsubscribe from an update', () => {
-    const store = createStore();
-    const onNameChanged = stub();
-    store.subscribeToItem('name', onNameChanged);
-    store.unsubscribeFromItem('name', onNameChanged);
-    store.updateItem('name', 'Ada');
-    expect(onNameChanged).to.not.have.been.called();
   });
 });

@@ -107,6 +107,7 @@ export default class App extends Component {
         </Container>
         <SocialBar />
       </div>
+
     );
   }
 }

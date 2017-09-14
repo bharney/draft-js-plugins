@@ -19,11 +19,6 @@ export default ({ blockType, children }) => (
     preventBubblingUp = (event) => { event.preventDefault(); }
 
     blockTypeIsActive = () => {
-      // if the button is rendered before the editor
-      if (!this.props.getEditorState) {
-        return false;
-      }
-
       const editorState = this.props.getEditorState();
       const type = editorState
         .getCurrentContent()
