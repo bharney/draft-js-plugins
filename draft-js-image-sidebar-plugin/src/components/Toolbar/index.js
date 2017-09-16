@@ -20,17 +20,26 @@ export default class Toolbar extends React.Component {
 
   onEditorStateChange = (editorState) => {
     const selection = editorState.getSelection();
-    if (!selection.getHasFocus()) {
-      this.setState({
-        position: {
-          transform: 'scale(0)',
-        },
-      });
-      return;
-    }
-
+    // if (!selection.getHasFocus()) {
+    //   this.setState({
+    //     position: {
+    //       transform: 'scale(0)',
+    //     },
+    //   });
+    //   return;
+    // }
     const currentContent = editorState.getCurrentContent();
     const currentBlock = currentContent.getBlockForKey(selection.getStartKey());
+    debugger;
+    if (currentBlock.getText() != "")
+    {
+        this.setState({
+          position: {
+            transform: 'scale(0)',
+          },
+        });
+        return;
+      }
     // TODO verify that always a key-0-0 exists
     const offsetKey = DraftOffsetKey.encode(currentBlock.getKey(), 0, 0);
     // Note: need to wait on tick to make sure the DOM node has been create by Draft.js
